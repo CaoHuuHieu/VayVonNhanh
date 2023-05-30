@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  border-top: 4px green solid;
+  border-bottom: 1px #ccc solid;
+  height: 60px;
+}
+
+header .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header-top div a {
+  display: inline-block;
+  line-height: 56px;
+}
+
+header .header-top .logo {
+  font-size: 20px;
+  color: green;
+}
+
+.header-right a {
+  padding: 0 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.header-right a:hover {
+  background-color: #ccc;
+  color: #fff;
+}
+
+main {
+  margin-top: 20px;
+}
+
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 12px;
+}
+
+.item-container .item {
+  padding: 4px 20px;
+  border: 2px solid #ccc;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  margin-right: 16px;
+}
+
+.item-container .item:hover {
+  border: 2px solid rgb(26, 216, 26);
+}
+
+.item-container .item .item-img {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+
+.item-container .item .item-img img {
+  width: 164px;
+  height: 44px;
+}
+
+.item-container .item .item-description {
+  text-align: center;
+  padding: 12px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid #ccc;
+}
+
+.item-container .item .item-detail {
+  padding: 12px 0;
+  color: #333;
+}
+
+.item-container .item .item-detail p {
+}
+
+.item-container .item .item-detail p.firth {
+  padding: 2px 0;
+}
+
+.item-container .item .item-detail p.second {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.item-container .item .number {
+  color: purple;
+  font-weight: bold;
+}
+
+.item-container .item .item-detail p.thirth {
+  margin: 10px 0;
+}
+
+.item-container .item .item-detail .fourth {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.item-container .item .button {
+  display: flex;
+  justify-content: center;
+}
+
+.item-container .item a.register {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  background-color: rgb(26, 216, 26);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.item-container .item a.register:hover {
+  opacity: 0.8;
+}
+
+.admin {
+  display: flex;
+  justify-content: space-around;
+}
+
+.admin .form-input {
+  margin: 14px;
+}
+
+.admin .form-input span {
+  display: inline-block;
+  min-width: 35%;
+}
+
+.admin .form-input input {
+  padding: 6px 12px;
+  width: 60%;
+}
+
+.admin .form-input input[type="submit"] {
+  display: block;
+  width: 96%;
+  text-align: center;
+  padding: 8px 0;
+  background-color: rgb(26, 216, 26);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.admin .item {
+  height: 300px;
+}
+
+.service table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.service table th {
+  background-color: green;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.service table td {
+  padding: 10px 20px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.service table tr:nth-child(even) {
+  background-color: #ececec;
+}
+.service table td .img{
+  width: 100%;
+  height: auto;
+}
+.service table td img {
+  width: 154px;
+  height: 44px;
+}
+
+.service table td {
+  text-align: center;
+}
+
+.service table td input {
+  display: block;
+  padding: 4px 8px;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border:none;
+  min-width: 100px;
+}
+
+.service h1{
+	background-color: green;
+	color: #fff;
+	text-align:center;
+	padding: 20px 0;
+}
+.service .btn-add{
+	display:inline-block;
+	padding: 20px;
+	font-size: 16px;
+	background-color: green;
+	color: #fff;
+	font-weight: 600;
+	border-radius: 4px;
+	margin:  20px 0;
+	
+}
+.service table td .edit {
+  background-color: aqua;
+}
+
+.service table td .delete {
+  background-color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+  .admin .form-input span {
+    display: block;
+    margin-bottom: 8px;
+  }
+  .admin .form-input input {
+    width: 100%;
+    padding: 10px 12px;
+  }
+  .admin .form-input input[type="submit"]{
+  
+   width: 100%;
+  }
+  .admin {
+    display: block;
+  }
+  .service table td {
+    padding: 2px 4px;
+  }
+}

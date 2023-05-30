@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container service">
+      <h1>Danh sách gói dịch vụ</h1>
+    	<a th:href="@{/admin/service}" class="btn-add"> Thêm mới</a>
+    
+    
+      <table>
+        <tr>
+          <th style="width: 20%">Đường dẫn</th>
+          <th style="width: 50%">Hình ảnh</th>
+          <th style="width: 30%">Thao tác</th>
+        </tr>
+
+        <tr th:each="service : ${services}">
+          <td th:text="${service.link}"></td>
+          <td>
+            <div class="img"><img
+            	th:src="@{'/images/' + ${service.imageName}}"
+              alt=""
+            /></div>
+          </td>
+          <td>
+              <form th:method="get" th:action="@{'/admin/service/'+${service.id}}">
+              	<input type="submit"  class="edit" value="Chỉnh sửa"/>
+              </form>
+              <form th:method="delete" th:action="@{'/admin/service/'+${service.id}}">
+              	<input type="submit"  class="delete" value="Xóa"/>
+              </form>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

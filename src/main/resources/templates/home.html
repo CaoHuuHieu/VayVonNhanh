@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>VayVonNhanh</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="container header-top">
+        <div>
+          <a href="#" class="logo">VayVonNhanh365.vn</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="section-1">
+          <p>Hãy so sánh và lựa chọn một trong <strong th:text="${services.size}"></strong> bên cho vay</p>
+          <div class="item-container">
+            <div class="item" th:each="service : ${services}">
+              <div class="item-img">
+                <img
+                  th:src="@{'/images/'+${service.imageName}}"
+                  alt=""
+                />
+              </div>
+              <div class="item-description">
+                <p>Với lãi suất 0%</p>
+              </div>
+              <div class="item-detail">
+                <p class="firth">Khoản vay đầu</p>
+                <p class="second">
+                  0% đến &nbsp;<span class="number"  th:text="${service.firstLoan}"></span>
+                </p>
+                <p class="thirth">
+                  Số tiền tối đa &nbsp;<span class="number"  th:text="${service.maxLoan}"></span>
+                </p>
+                <div class="fourth">
+                  <div>Độ tuổi</div>
+                  <div>
+                  	
+                    <span class="number"  th:text="${service.minAge}"> &nbsp;</span> đến &nbsp;
+                    <span class="number" th:text="${service.maxAge}"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="button">
+                <a href="https://shorten.asia/tANxYRTA" class="register"
+                  >Đăng ký ngay</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </main>
+  </body>
+</html>
