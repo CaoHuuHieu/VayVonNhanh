@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+<title>VayOnline365</title>
+</head>
+
+<body>
+	<div class="container admin service">
+		<div>
+			<h1>Thêm ngân hàng</h1>
+			<form method="post" th:action="@{/admin/bank}"
+				th:object="${bank}" enctype="multipart/form-data">
+				<div class="form-input">
+					<input type="hidden" th:field="*{id}" />
+				</div>
+				<div class="form-input">
+					<span>Chọn hình ảnh: </span> <input type="file" name="imageFile"
+						accept="image/*" />
+				</div>
+				<div class="form-input">
+					<span>Đường link: </span> <input type="text" th:field="*{link}" />
+				</div>
+				<div class="form-input">
+					<span>Tên ngân hàng: </span> <input type="text" th:field="*{name}" />
+				</div>
+				<div class="form-input">
+					<span>Tiêu đề: </span> <input type="text"
+						th:field="*{heading}" />
+				</div>
+				<div class="form-input">
+					<span>Mô tả: </span> <textarea id="discription" onkeydown="handleKeyDown(event)"
+						th:field="*{discription}" ></textarea>
+				</div>
+				<div class="form-input">
+					<input type="submit" name="submit" th:if="${bank.id == 0}"
+						value="Thêm mới" /> <input type="submit" name="submit"
+						th:unless="${bank.id == 0}" value="Cập nhật" />
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" th:src="@{/js/vayvonnhanh.js}"></script>
+</html>

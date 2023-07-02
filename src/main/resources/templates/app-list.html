@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<title>VayOnline365</title>
+</head>
+
+<body>
+	<div class="container service">
+		<h1>Danh sách App</h1>
+		<div style="display: flex; justify-content: space-between;">
+			<div >
+				<a th:href="@{/admin/app}" class="btn-add"> Thêm mới</a> <a
+					th:href="@{/admin/banks}" class="btn-add">Ngân hàng</a>
+			</div>
+			<a th:href="@{/logout}" class="btn-add"> Đăng xuất</a>
+		</div>
+		<table>
+			<tr>
+				<th style="width: 20%">Tên app</th>
+				<th style="width: 50%">Đường dẫn</th>
+				<th style="width: 30%">Thao tác</th>
+			</tr>
+
+			<tr th:each="app : ${apps}">
+				<td th:text="${app.name}"></td>
+				<td th:text="${app.link}"></td>
+
+				<td>
+					<form th:method="get" th:action="@{'/admin/app/'+${app.id}}">
+						<input type="submit" class="edit" value="Chỉnh sửa" />
+					</form>
+					<form th:method="delete" th:action="@{'/admin/app/'+${app.id}}">
+						<input type="submit" class="delete" value="Xóa" />
+					</form>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

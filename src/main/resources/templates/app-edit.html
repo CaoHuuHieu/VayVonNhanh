@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+<title>VayOnline365</title>
+</head>
+
+<body>
+	<div class="container admin service">
+		<div>
+			<h1>Thêm App</h1>
+			<form method="post" th:action="@{/admin/app}"
+				th:object="${app}" enctype="multipart/form-data">
+				<div class="form-input">
+					<input type="hidden" th:field="*{id}" />
+				</div>
+				<div class="form-input">
+					<span>Chọn hình ảnh: </span> <input type="file" name="imageFile"
+						accept="image/*" />
+				</div>
+				<div class="form-input">
+					<span>Đường link: </span> <input type="text" th:field="*{link}" />
+				</div>
+				<div class="form-input">
+					<span>Tên ngân hàng: </span> <input type="text" th:field="*{name}" />
+				</div>
+				<div class="form-input">
+					<span>Khoản vay từ: </span> <input type="text"
+						th:field="*{minLoan}" />
+				</div>
+				<div class="form-input">
+					<span>Khoản vay tối đa: </span> <input type="text"
+						th:field="*{maxLoan}" />
+				</div>
+				<div class="form-input">
+					<input type="submit" name="submit" th:if="${app.id == 0}"
+						value="Thêm mới" /> <input type="submit" name="submit"
+						th:unless="${app.id == 0}" value="Cập nhật" />
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

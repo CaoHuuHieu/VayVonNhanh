@@ -1,0 +1,433 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+header {
+	border-top: 4px green solid;
+	border-bottom: 1px #ccc solid;
+	height: 60px;
+}
+
+header .header-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 0 5px;
+}
+
+header .header-top .link {
+	display: inline-block;
+	line-height: 56px;
+	min-width: 140px;
+	text-align: center;
+}
+
+header .header-top .logo {
+	font-size: 20px;
+	color: green;
+}
+
+.header-right-1 {
+	display: flex;
+}
+
+.header-right .link {
+	padding: 0 10px;
+	font-size: 18px;
+	color: #333;
+}
+
+.header-right .link:hover {
+	background-color: #DDF7E3;
+}
+
+.header-right .link-3 {
+	position: relative;
+}
+
+.header-right .link-3 .credit-list {
+	width: 180px;
+	position: absolute;
+	display: none;
+}
+
+.header-right .link-3 .credit-list a {
+	font-size: 14px;
+	text-align: left;
+	display: block;
+}
+
+.header-right-1 .link-3:hover .credit-list {
+	display: block;
+	z-index: 10;
+	background-color: #fff;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.header-right-2 {
+	display: none;
+}
+
+.header-right-2 .show {
+	display: none;
+	background-color: #fff;
+	height: 220px;
+	z-index: 10;
+	position: fixed;
+	right: 0;
+	width: 200px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.header-right-2 i {
+	color: green;
+	font-size: 26px;
+	display: block;
+	line-height: 56px;
+	text-align: right;
+}
+
+.header-right-2 .header-right-mobile {
+	right: 0;
+	padding-left: 20px;
+}
+
+.header-right-2 .header-right-mobile .link-mobile {
+	display: block;
+	padding: 10px 0;
+}
+
+.header-right-2 .header-right-mobile a {
+	color: #000;
+}
+
+.header-right-2 .header-right-mobile .link-3 .link-mobile {
+	display: block;
+}
+
+.header-right-2 .header-right-mobile .link-3 .credit-list {
+	padding: 0 10px;
+}
+
+.header-right-2 .header-right-mobile .link-3 .link-credit {
+	display: block;
+	padding: 8px;
+}
+
+main {
+	margin-top: 20px;
+	padding: 0 10px;
+}
+
+.item-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-top: 12px;
+	z-index: 1;
+}
+
+.item-container .item {
+	height: 300px;
+	padding: 4px 20px;
+	border: 2px solid #ccc;
+	margin-bottom: 16px;
+	border-radius: 4px;
+	margin-right: 16px;
+	padding: 4px 20px;
+}
+
+.item-container .item:hover {
+	border: 2px solid rgb(26, 216, 26);
+}
+
+.item-container .item .item-img {
+	display: flex;
+	justify-content: center;
+	padding: 12px;
+}
+
+.item-container .item .item-img img {
+	width: 190px;
+	height: 80px;
+}
+
+.item-container .item .item-description {
+	text-align: center;
+	padding: 12px;
+	border-bottom: 2px solid #ccc;
+	border-top: 2px solid #ccc;
+}
+
+.item-container .item .item-detail {
+	padding: 12px 0;
+	color: #333;
+}
+
+.item-container .item .item-detail p {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0;
+}
+
+.item-container .item .item-detail p span:first-child {
+	font-weight: bold;
+}
+
+.item-container .item .number {
+	color: purple;
+	font-weight: bold;
+}
+
+.item-container .item .button {
+	display: flex;
+	justify-content: center;
+}
+
+.item-container .item a.register {
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 8px 0;
+	background-color: rgb(26, 216, 26);
+	color: #fff;
+	font-size: 16px;
+	border-radius: 4px;
+}
+
+.item-container .item a.register:hover {
+	opacity: 0.8;
+}
+
+.admin {
+	
+}
+
+.admin .form-input {
+	margin: 14px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.admin .form-input span {
+	display: inline-block;
+	min-width: 20%;
+}
+
+.admin .form-input input {
+	padding: 8px 12px;
+	width: 80%;
+}
+
+.admin .form-input textarea {
+	width: 80%;
+	height: 300px;
+	padding: 8px 12px;
+}
+
+.admin .form-input input[type="submit"] {
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 8px 0;
+	background-color: rgb(26, 216, 26);
+	color: #fff;
+	font-size: 16px;
+	border-radius: 4px;
+}
+
+.admin .item {
+	height: 300px;
+}
+
+.service table {
+	table-layout: fixed;
+	width: 100%;
+}
+
+.service table th {
+	background-color: green;
+	padding: 10px 20px;
+	color: #fff;
+}
+
+.service table td {
+	padding: 10px 20px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.service table tr:nth-child(even) {
+	background-color: #ececec;
+}
+
+.service table td .img {
+	width: 100%;
+	height: auto;
+}
+
+.service table td img {
+	width: 154px;
+	height: 44px;
+}
+
+.service table td {
+	text-align: center;
+}
+
+.service table td input {
+	display: block;
+	padding: 4px 8px;
+	color: #fff;
+	font-size: 16px;
+	margin-bottom: 8px;
+	border-radius: 4px;
+	border: none;
+	min-width: 100px;
+}
+
+.service h1 {
+	background-color: green;
+	color: #fff;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.service .btn-add {
+	display: inline-block;
+	padding: 16px;
+	font-size: 16px;
+	background-color: green;
+	color: #fff;
+	font-weight: 600;
+	border-radius: 4px;
+	margin: 20px 0;
+}
+
+.service table td .edit {
+	background-color: aqua;
+}
+
+.service table td .delete {
+	background-color: red;
+}
+
+.bank-item {
+	border: 2px solid #045a1a;
+	display: flex;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.bank-item .img {
+	flex: 1;
+	margin-right: 20px;
+	border-right: 2px solid #045a1a;
+	padding-right: 20px;
+}
+
+.bank-item img {
+	width: 100%;
+	height: auto;
+	margin-right: 20px;
+}
+
+.bank-item .detail {
+	flex: 2;
+}
+
+.bank-item h1 {
+	color: #333;
+	margin-bottom: 12px;
+}
+
+.bank-item h3 {
+	font-size: 16px;
+	font-weight: 600;
+	color: #000;
+	margin-bottom: 8px;
+}
+
+.bank-item a {
+	display: block;
+	color: #fff;
+	background-color: rgb(26, 216, 26);;
+	padding: 10px 0;
+	width: 200px;
+	margin-top: 20px;
+	text-align: center;
+	border-radius: 8px;
+	position: absolute;
+	bottom: 20px;
+	font-size: 18px;
+}
+
+.bank-item .request {
+	line-height: 22px;
+}
+
+@media only screen and (max-width: 600px) {
+	.container {
+		width: 100%;
+	}
+	.admin .form-input span {
+		display: block;
+		margin-bottom: 8px;
+	}
+	.admin .form-input input {
+		width: 100%;
+		padding: 10px 12px;
+	}
+	.admin .form-input input[type="submit"] {
+		width: 100%;
+	}
+	.admin {
+		display: block;
+	}
+	.service table td {
+		padding: 2px 4px;
+	}
+	.header-right-1 {
+		display: none;
+	}
+	.header-right-2 {
+		display: block;
+	}
+	.admin .form-input {
+		display: block;
+	}
+	.bank-item {
+		display: block;
+		margin: 20px 4px;
+		padding-bottom: 4px;
+	}
+	.bank-item .img {
+		margin-right: 0;
+		border-right: none;
+	}
+	.bank-item a {
+		position: relative;
+		width: 100%;
+		margin: 0;
+		bottom: 0;
+	}
+}

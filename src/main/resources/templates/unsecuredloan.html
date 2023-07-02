@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://kit.fontawesome.com/8deb314de0.js"
+	crossorigin="anonymous"></script>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+
+<title>VayOnline365</title>
+</head>
+
+<body>
+	<header>
+		<div class="container header-top">
+			<div>
+				<a th:href="@{/}" class="logo link">VayOnline365</a>
+			</div>
+			<div class="header-right-1 header-right">
+				<div>
+					<a th:href="@{/}" class="link">Vay App</a>
+				</div>
+				<div>
+					<a th:href="@{/vaytinchap}" class="link">Vay tín chấp</a>
+				</div>
+				<div class="link-3">
+					<a href="#" class="link">Thẻ tín dụng</a>
+					<div class="credit-list">
+						<a href="https://shorten.asia/tANxYRTA" class="link">VIB
+							Financial</a> <a href="https://shorten.asia/AshEjGvP" class="link">VIB
+							Bank</a> <a href="https://shorten.asia/N6g3914h" class="link">TPBank
+							EVOCARD</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="header-right-2">
+				<div>
+					<span class="link-mobile shortcut shortcut-1"><i
+						class="fa-solid fa-list"></i></span>
+					<div class="header-right-mobile"></div>
+					<div class="show">
+						<div class="header-right-mobile">
+							<div>
+								<a th:href="@{/}" class="link-mobile">Vay App</a>
+							</div>
+							<div>
+								<a th:href="@{/vaytinchap}" class="link-mobile">Vay tín chấp</a>
+							</div>
+							<div class="link-3">
+								<a href="#" class="link-mobile">Thẻ tín dụng</a>
+								<div class="credit-list">
+									<a href="https://shorten.asia/tANxYRTA" class="link-credit">VIB
+										Financial</a> <a href="https://shorten.asia/AshEjGvP"
+										class="link-credit">VIB Bank</a> <a
+										href="https://shorten.asia/N6g3914h" class="link-credit">TPBank
+										EVOCARD</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="bank-list">
+				<div class="bank-item" th:each="bank : ${banks}">
+					<div class="img">
+						<img
+							th:src="'/images/'+${bank.imageName}" />
+					</div>
+					<div class="detail">
+						<h1 th:text="${bank.name}"></h1>
+						<h3 th:text="${bank.heading}"></h3>
+						<p class="request" th:utext="${bank.discription}" id="discription"></p>
+						<a th:href="${bank.link}">Đăng ký ngay</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>
